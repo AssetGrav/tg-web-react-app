@@ -30,7 +30,7 @@ function ProductList() {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('https://localhost:8000', {
+        fetch('https://tg-web-app-node.herokuapp.com/web-data', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ function ProductList() {
           body: JSON.stringify(data)
         })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [addedItems])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
