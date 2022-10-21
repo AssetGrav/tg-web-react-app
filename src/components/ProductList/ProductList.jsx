@@ -23,30 +23,30 @@ const getTotalPrice = (items = []) => {
 function ProductList() {
   const [addedItems, setAddedItems] = useState([])
   const {tg, queryId} = useTelegram()
-
+  console.log("query", queryId)
   const onSendData = useCallback(() => {
-        const data = {
-            products: addedItems,
-            totalPrice: getTotalPrice(addedItems),
-            queryId,
-        }
-        fetch('https://tg-web-app-node.herokuapp.com/web-data', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [addedItems])
+      const data = {
+          products: addedItems,
+          totalPrice: getTotalPrice(addedItems),
+          queryId,
+      }
+      fetch('https://tg-web-app-node.herokuapp.com/web-data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [addedItems])
 
-    useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData)
-        return () => {
-            tg.offEvent('mainButtonClicked', onSendData)
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [onSendData])
+  useEffect(() => {
+      tg.onEvent('mainButtonClicked', onSendData)
+      return () => {
+          tg.offEvent('mainButtonClicked', onSendData)
+      }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onSendData])
 
   const onAdd = (product) => {
     const alreadyAdded = addedItems.find(item => item.id === product.id)
@@ -74,6 +74,7 @@ function ProductList() {
     <div className={'list'}>
         {products.map(item => (
           <ProductItem
+            key={item.id}
             product={item}
             onAdd={onAdd}
             className={'item'}
