@@ -5,7 +5,7 @@ import { useTelegram } from '../../hook/useTelegram';
 import sunkiller from '../../photos/WhatsApp_Image_2022-.jpeg'
 
 const products = [
-  {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цветаб прямые', img: sunkiller},
+  {id: '1', title: 'Sunkiller SPF50', price: 5000, description: 'Лудший крем от солнца', img: sunkiller},
   {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
   {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синнего цвета, косые'},
   {id: '4', title: 'Куртка 8', price: 7000, description: 'Фиолетовая цвета, прямые'},
@@ -31,7 +31,7 @@ function ProductList() {
           totalPrice: getTotalPrice(addedItems),
           queryId,
       }
-      fetch('https://tg-web-app-node.herokuapp.com/web-data', {
+      fetch('https://blooming-ridge-94832.herokuapp.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
