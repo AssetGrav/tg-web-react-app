@@ -2,9 +2,10 @@ import React, { useCallback, useEffect, useState } from 'react'
 import ProductItem from '../ProductItem/ProductItem'
 import './ProductList.css'
 import { useTelegram } from '../../hook/useTelegram';
+import sunkiller from '../../photos/WhatsApp_Image_2022-.jpeg'
 
 const products = [
-  {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цветаб прямые'},
+  {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цветаб прямые', img: sunkiller},
   {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
   {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синнего цвета, косые'},
   {id: '4', title: 'Куртка 8', price: 7000, description: 'Фиолетовая цвета, прямые'},
