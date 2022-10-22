@@ -24,14 +24,15 @@ const getTotalPrice = (items = []) => {
 function ProductList() {
   const [addedItems, setAddedItems] = useState([])
   const {tg, queryId} = useTelegram()
-  console.log("query", queryId)
+
   const onSendData = useCallback(() => {
       const data = {
           products: addedItems,
           totalPrice: getTotalPrice(addedItems),
           queryId,
       }
-      fetch('https://morning-mountain-75705.herokuapp.com', {
+      console.log("data", data)
+      fetch('https://morning-mountain-75705.herokuapp.com/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
