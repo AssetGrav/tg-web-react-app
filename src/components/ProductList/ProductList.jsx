@@ -31,7 +31,7 @@ function ProductList() {
           totalPrice: getTotalPrice(addedItems),
           queryId,
       }
-      fetch('https://blooming-ridge-94832.herokuapp.com', {
+      fetch('https://morning-mountain-75705.herokuapp.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
