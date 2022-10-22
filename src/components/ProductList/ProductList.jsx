@@ -32,7 +32,7 @@ function ProductList() {
           queryId,
       }
       console.log("data", data)
-      fetch('https://morning-mountain-75705.herokuapp.com/', {
+      fetch('https://morning-mountain-75705.herokuapp.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
