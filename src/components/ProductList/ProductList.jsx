@@ -5,12 +5,13 @@ import { useTelegram } from '../../hook/useTelegram';
 import sunkiller from '../../photos/WhatsApp_Image_2022-.jpeg'
 import anessa from '../../photos/an_50_spf_1-491x800.jpg'
 import aqua from '../../photos/aquaskin.jpg'
+import car from '../../photos/car.jpg'
 
 const products = [
   {id: '1', title: 'Isehan Sunkiller Perfect Water Essence SPF50', price: 5000, description: 'Солнцезащитный крем', img: sunkiller},
-  {id: '2', title: 'Shiseido Anessa Perfect UV Skincare Milk SPF 50', price: 12000, description: 'Подходит для детей, кроме новорожденных, и для взрослых.', img: anessa},
+  {id: '2', title: 'Shiseido Anessa Perfect UV Skincare Milk', price: 12000, description: 'Подходит для детей, кроме новорожденных, и для взрослых.', img: anessa},
   {id: '3', title: 'SKIN AQUA', price: 5000, description: 'Rohto Skin Aqua Tone Up UV Essence — санскрин для лица и тела с приятной текстурой ', img: aqua},
-  {id: '4', title: 'Название товара', price: 7000, description: 'Описание'},
+  {id: '4', title: 'Добавьте товар', price: 7000, description: 'Это бесплатно', img: car},
 ]
 
 const getTotalPrice = (items = []) => {
