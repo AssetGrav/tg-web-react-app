@@ -11,7 +11,13 @@ function ProductItem({product, className, onAdd}) {
     <div className={'product ' + className}>
         <img className={'img'} src={product.img} alt={product.title}></img>
         <div className={'title'}>{product.title}</div>
-        <div className={'description'}>{product.description}</div>
+        <div className={'description'}>
+            {
+                product.description.lenght < 50
+                    ? product.description
+                    : product.description.substring(0, 50)
+            }
+        </div>
         <div className={'price'}>
             <span>Price: <b>{product.price}</b></span>
         </div>

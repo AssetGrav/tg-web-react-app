@@ -67,7 +67,7 @@ function Form() {
             <input
                 className={'input'}
                 type='text'
-                placeholder={'Улица'}
+                placeholder={'Адрес'}
                 value={street}
                 onChange={onChangeStreet}
             />
