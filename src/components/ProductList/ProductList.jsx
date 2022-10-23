@@ -3,16 +3,14 @@ import ProductItem from '../ProductItem/ProductItem'
 import './ProductList.css'
 import { useTelegram } from '../../hook/useTelegram';
 import sunkiller from '../../photos/WhatsApp_Image_2022-.jpeg'
+import anessa from '../../photos/an_50_spf_1-491x800.jpg'
+import aqua from '../../photos/aquaskin.jpg'
 
 const products = [
-  {id: '1', title: 'Sunkiller SPF50', price: 5000, description: 'Лудший крем от солнца', img: sunkiller},
-  {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
-  {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синнего цвета, косые'},
-  {id: '4', title: 'Куртка 8', price: 7000, description: 'Фиолетовая цвета, прямые'},
-  {id: '5', title: 'Джинсы 3', price: 5000, description: 'Зеленого цвета, прямые'},
-  {id: '6', title: 'Куртка 7', price: 6000, description: 'Зеленого цвета, теплая'},
-  {id: '7', title: 'Джинсы 6', price: 5500, description: 'Синего цвета, прямые'},
-  {id: '8', title: 'Куртка 5', price: 12000, description: 'Красного цвета, теплая'},
+  {id: '1', title: 'Isehan Sunkiller Perfect Water Essence SPF50', price: 5000, description: 'Солнцезащитный крем', img: sunkiller},
+  {id: '2', title: 'Shiseido Anessa Perfect UV Skincare Milk SPF 50', price: 12000, description: 'Подходит для детей, кроме новорожденных, и для взрослых.', img: anessa},
+  {id: '3', title: 'SKIN AQUA', price: 5000, description: 'Rohto Skin Aqua Tone Up UV Essence — санскрин для лица и тела с приятной текстурой ', img: aqua},
+  {id: '4', title: 'Название товара', price: 7000, description: 'Описание'},
 ]
 
 const getTotalPrice = (items = []) => {
